@@ -1,0 +1,8 @@
+:root.theme-light {
+  --color-green: #000;
+  --bakeground-color: white;
+}
+:root.theme-dark {
+  --color-green: #00cc14;
+  --bakeground-color: black;
+}
