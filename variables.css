@@ -1,0 +1,28 @@
+@media (prefers-color-scheme: light) {
+  :root {
+    --bakeground-color: white;
+    --color-green: #000;
+    --color-like-text: white;
+    --fill-of-heart: white;
+    --border-of-heard: black;
+    --hover-fill-in-heard: red;
+    --dialog-backeground: white;
+    --dialog-text: black;
+    --dialog--text-hover: white;
+    --dialog-svg: black;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bakeground-color: black;
+    --color-green: #00cc14;
+    --color-like-text: black;
+    --fill-of-heart: black;
+    --border-of-heard: #00cc14;
+    --hover-fill-in-heard: #00cc14;
+    --dialog-backeground: black;
+    --dialog-text: white;
+    --dialog--text-hover: black;
+    --dialog-svg: #00cc14;
+  }
+}

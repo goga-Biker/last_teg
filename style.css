@@ -1,0 +1,403 @@
+/* Здесь вы напишете основную часть стилей страницы.
+
+Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
+✦ theme-dark — класс тёмной темы
+✦ theme-light — класс светлой темы
+✦ like-icon — для svg-иконки анимированного сердца
+✦ card__like-button — для кнопки Like рядом с иконкой
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
+✦ button__text — для обозначения текстового элемента внутри кнопки
+
+Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
+
+*/
+
+.page {
+  background: var(--bakeground-color);
+  border: 1px solid white;
+  font-family: "2B"; /*
+  background: repeating-linear-gradient(green, black 4px, transparent 4px),
+    repeating-linear-gradient(90deg, green, black 4px, transparent 4px);
+*/
+}
+
+.header {
+  width: 100%;
+  border: 2px solid var(--color-green);
+  margin: auto;
+}
+.header__title {
+  margin-top: 19%;
+  text-align: center;
+  color: var(--color-green);
+  font-size: clamp(3.063rem, 2.777rem + 1.429vw, 4.063rem);
+  line-height: normal;
+  text-transform: uppercase;
+}
+.header__subtitle {
+  margin-top: 20px;
+  margin-bottom: 25px;
+  text-align: center;
+  color: var(--color-green);
+  font-size: clamp(0.875rem, 0.714rem + 0.804vw, 1.438rem);
+  line-height: normal;
+  text-transform: uppercase;
+}
+.header__theme-menu {
+  margin-left: 40%;
+}
+
+.theme-menu__item {
+  margin-bottom: 14px;
+}
+.theme-menu__item:last-child {
+  margin-bottom: 25px;
+}
+
+.theme-menu__button::before {
+  content: "▶️";
+  opacity: 1;
+  position: absolute;
+  left: -10px;
+}
+
+.theme-menu__button {
+  background: none;
+  border: none;
+  color: var(--color-green);
+  font-size: 14px;
+  line-height: normal;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  transition: 0.5s;
+}
+
+/*_____________________________________________________________________________________________________________________*/
+
+.article {
+  margin: auto;
+  margin-top: 107px;
+  border: 5px solid red;
+  width: 100%;
+}
+.article__title {
+  border: 1px solid var(--color-green);
+  color: var(--color-green);
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 465;
+  line-height: 21px; /* 116.667% */
+  padding: 5px 10px;
+}
+.article__group-image {
+  width: 100%;
+  position: relative;
+}
+.article__img-label {
+  position: absolute;
+  z-index: 10;
+  right: 25px;
+  top: 25px;
+  font-size: 14px;
+  color: var(--color-green);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+.article__img {
+  width: 100%;
+  height: 100%;
+  /*
+  filter: contrast(500%); контраст
+  filter: grayscale(100%); оттенки серого
+  filter: hue-rotate(50deg); оттенок-поворот
+  filter: invert(100%); инвертировать
+  filter: brightness(0.1); яркость
+  filter: saturate(360%); насыщать
+  filter: sepia(500%); сепия
+  */
+}
+/*article_1*/
+.get_to_work {
+}
+/*article_2*/
+.blank_sheet {
+  filter: grayscale(80%);
+}
+
+/*article_3*/
+.will_not_work {
+  filter: saturate(360%);
+}
+/*article_4*/
+.pursuit_of_ideal {
+  filter: hue-rotate(25deg);
+}
+/*article_5*/
+.loved_ones {
+  filter: invert(85%);
+}
+/*article_6*/
+.workaround_strategies {
+  filter: sepia(100%);
+}
+/*article_7*/
+.when_yo_give_up {
+  filter: blur(20px);
+}
+/*article_8ц*/
+.I_am_here_now {
+  filter: invert(20%) hue-rotate(100deg) blur(2px);
+}
+
+.article__text {
+  margin-top: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: 1px solid var(--color-green);
+  color: var(--color-green);
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 465;
+  line-height: 21px; /* 116.667% */
+}
+.article__text:last-child {
+  margin-top: 27px;
+  margin-bottom: 25px;
+}
+.article__group-like {
+  border: 1px solid yellow;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 25px;
+}
+.article__like {
+  border: 1px solid var(--color-green);
+}
+.card__like-button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-green);
+  transform: translateX(-100%);
+  transition: 1s;
+  z-index: 0;
+}
+.card__icon-button {
+  margin-right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.card__like-button {
+  background: none;
+  border: 1px solid var(--color-green);
+  cursor: pointer;
+  width: 130px;
+  position: relative;
+  overflow: hidden;
+}
+.button__text {
+  color: var(--color-green);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%; /* 12.6px */
+  text-align: center;
+  transition: 0.2s;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 9px 17px;
+}
+.button__text:hover {
+  color: var(--color-like-text);
+  z-index: 3;
+}
+.card__like-button:hover::before {
+  transform: translateX(0);
+}
+.save-button {
+  width: 335px;
+  background: none;
+  border: none;
+  border: 2px solid var(--color-green);
+  margin: auto;
+  padding: 15px 0px;
+  margin-top: 54px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 105px;
+  cursor: pointer;
+}
+.save-button__svg {
+  margin-left: 20px;
+}
+.save-button__text {
+  color: var(--color-green);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 90%; /* 12.6px */
+  margin-left: 8px;
+}
+/*_____________________________Смена цвета у картинок__________________________________________________________________*/
+.part1 {
+  fill: var(--color-green);
+}
+.part2 {
+  transition: fill 0.5s linear;
+  fill: var(--fill-of-heart);
+}
+.part3 {
+  transition: fill 0.5s linear;
+  fill: var(--fill-of-heart);
+}
+.part4 {
+  transition: fill 0.1s linear;
+  fill: var(--fill-of-heart);
+}
+.like-icon:hover .part3 {
+  fill: var(--hover-fill-in-heard);
+}
+.like-icon:hover .part2 {
+  fill: var(--hover-fill-in-heard);
+}
+.G-heard {
+  transform-origin: center center;
+  transition: fill 1s;
+}
+.like-icon {
+  position: relative;
+}
+.like-icon.is-liked:hover .part2 {
+  fill: red;
+}
+
+.like-icon:active .part2 {
+  fill: red;
+}
+.like-icon:active .part3 {
+  fill: red;
+}
+.like-icon:active .part4 {
+  fill: black;
+}
+.like-icon.is-liked .part2 {
+  fill: red;
+}
+.like-icon.is-liked .part1 {
+  fill: var(--border-of-heard);
+}
+.like-icon.is-liked .part3 {
+  fill: red;
+}
+
+/*_______________________________________________________________________________________________*/
+.dialog {
+  border: none;
+  padding: 0;
+}
+.dialog:not([open]) {
+  display: none;
+}
+.dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+.dialog__container {
+  border: 1px solid var(--color-green);
+  width: 357px;
+  height: 193px;
+  margin: auto;
+  background: var(--dialog-backeground);
+}
+.dialog__container-text {
+  margin-top: 32px;
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-around;
+}
+.dialog-text {
+  max-width: 234px;
+  width: 100%;
+  color: var(--dialog-text);
+}
+.dialog__button {
+  border: 2px solid var(--color-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 293px;
+  width: 100%;
+  height: 38px;
+  margin: auto;
+  margin-top: 30px;
+  background: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.dialog__button-text:hover {
+  color: var(--dialog--text-hover);
+}
+.dialog__container-text svg {
+  fill: var(--dialog-svg);
+}
+.dialog__button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-green);
+  transform: translateX(-100%);
+  transition: 1s;
+  z-index: 0;
+}
+
+.dialog__button:hover::before {
+  transform: translateX(0);
+  z-index: 1;
+}
+
+.dialog__button-text {
+  margin-top: 20px; /*КОСЯК С ТЕКСТОМ ВНУТРИ КНОПКИ*/
+  color: var(--color-green);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 90%; /* 12.6px */
+  text-transform: uppercase;
+  position: relative;
+  display: block;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+}
+@media (width<376px) {
+  .save-button {
+    width: 306px;
+    flex-direction: column;
+    margin-bottom: 102px;
+  }
+  .save-button__text {
+    margin-top: 8px;
+  }
+  .save-button__text {
+    width: 100%;
+  }
+
+  .save-button__svg {
+    margin-left: 0px;
+  }
+}
