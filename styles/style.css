@@ -400,4 +400,8 @@
   .save-button__svg {
     margin-left: 0px;
   }
+  .button__text:hover {
+    color: none;
+    z-index: 3;
+  }
 }
