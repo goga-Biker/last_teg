@@ -49,21 +49,21 @@
   margin-left: 40%;
 }
 
-.header__theme-menu-item {
+.theme-menu__item {
   margin-bottom: 14px;
 }
-.header__theme-menu-item:last-child {
+.theme-menu__item:last-child {
   margin-bottom: 25px;
 }
 
-.header__theme-menu-button::before {
+.theme-menu__button::before {
   content: "▶️";
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   left: -10px;
 }
 
-.header__theme-menu-button {
+.theme-menu__button {
   background: none;
   border: none;
   color: var(--color-green);
@@ -74,23 +74,9 @@
   position: relative;
   transition: 0.5s;
 }
-.header__theme-menu-button_active {
-  opacity: 0.6;
-}
-.header__theme-menu-button_active::before {
-  opacity: 0.6;
-}
-.header__theme-menu-button_type_light {
-}
-.header__theme-menu-button_active {
-}
-.header__theme-menu-button_type_auto {
-}
-.header__theme-menu-button_type_dark {
-}
-.header__theme-menu-item:hover {
-  opacity: 0.6;
-}
+
+/*_____________________________________________________________________________________________________________________*/
+
 .article {
   margin: auto;
   margin-top: 107px;
@@ -236,7 +222,7 @@
   padding: 9px 17px;
 }
 .button__text:hover {
-  color: black;
+  color: var(--color-like-text);
   z-index: 3;
 }
 .card__like-button:hover::before {
@@ -266,14 +252,26 @@
   margin-left: 8px;
 }
 /*_____________________________Смена цвета у картинок__________________________________________________________________*/
+.part1 {
+  fill: var(--color-green);
+}
 .part2 {
   transition: fill 0.5s linear;
+  fill: var(--fill-of-heart);
 }
 .part3 {
   transition: fill 0.5s linear;
+  fill: var(--fill-of-heart);
 }
 .part4 {
   transition: fill 0.1s linear;
+  fill: var(--fill-of-heart);
+}
+.like-icon:hover .part3 {
+  fill: var(--hover-fill-in-heard);
+}
+.like-icon:hover .part2 {
+  fill: var(--hover-fill-in-heard);
 }
 .G-heard {
   transform-origin: center center;
@@ -285,9 +283,7 @@
 .like-icon.is-liked:hover .part2 {
   fill: red;
 }
-.like-icon:hover .part3 {
-  fill: var(--color-green);
-}
+
 .like-icon:active .part2 {
   fill: red;
 }
@@ -301,20 +297,10 @@
   fill: red;
 }
 .like-icon.is-liked .part1 {
-  fill: white;
+  fill: var(--border-of-heard);
 }
 .like-icon.is-liked .part3 {
   fill: red;
-}
-
-.like-icon:hover .part2 {
-  fill: var(--color-green);
-}
-
-.part1 {
-}
-
-.part4 {
 }
 
 /*_______________________________________________________________________________________________*/
@@ -333,7 +319,7 @@
   width: 357px;
   height: 193px;
   margin: auto;
-  background: black;
+  background: var(--dialog-backeground);
 }
 .dialog__container-text {
   margin-top: 32px;
@@ -344,6 +330,7 @@
 .dialog-text {
   max-width: 234px;
   width: 100%;
+  color: var(--dialog-text);
 }
 .dialog__button {
   border: 2px solid var(--color-green);
@@ -361,7 +348,10 @@
   overflow: hidden;
 }
 .dialog__button-text:hover {
-  color: black;
+  color: var(--dialog--text-hover);
+}
+.dialog__container-text svg {
+  fill: var(--dialog-svg);
 }
 .dialog__button::before {
   content: "";

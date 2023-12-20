@@ -20,7 +20,7 @@
     left: -15px;
   }
 }
-.header__theme-menu-button::before {
+.theme-menu__button::before {
   animation: moving-arrow 1s ease-in-out infinite alternate;
 }
 @keyframes heard {
